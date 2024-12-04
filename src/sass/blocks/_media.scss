@@ -29,10 +29,19 @@
     }
 
     .carousel {
-        padding: 30px 0;
+        padding: 30px 0 10px 0 !important;
 
         .carousel__iner {
             width: 100%;
+        }
+
+        .prev,
+        .next {
+            display: none;
+        }
+
+        .tns-outer {
+            width: 100% !important;
         }
     }
 }

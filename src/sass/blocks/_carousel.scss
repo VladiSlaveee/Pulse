@@ -1,7 +1,7 @@
 .carousel {
     padding: 81px 0;
 
-    &__iner {
+    .tns-outer {
         width: 80%;
         margin: 0 auto;
 
@@ -11,22 +11,20 @@
         }
     }
 
-    .slick-prev {
+    .prev {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: -60px;
         background-color: #fff;
         border: none;
         cursor: pointer;
     }
 
-    .slick-next {
+    .next {
         position: absolute;
-        right: -60px;
         transform: translateY(-50%);
         top: 50%;
-        transform: translateY(-50%);
+        right: 0;
         background-color: #fff;
         border: none;
         cursor: pointer;
