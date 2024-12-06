@@ -37,6 +37,25 @@ $(document).ready(function () {
     //     })
     // });
 
+
+    $('[data-modal=consultation').on('click', function () {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+
+    $('.modal__close').on('click', function () {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    });
+
+    $('.overlay').on('click', function () {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    });
+
+    $('.button_mini').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text()); //вытаскиваем текст из .catalog-item__subtitle и ставим в #order(id формы).modal__descr
+            $('.overlay, #order').fadeIn('slow');
+        })
+    });
 });
 
 
@@ -56,5 +75,7 @@ document.querySelector('.prev').addEventListener('click', function () {
 document.querySelector('.next').addEventListener('click', function () {
     slider.goTo('next');
 });
+
+
 
 
