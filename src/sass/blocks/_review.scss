@@ -1,0 +1,41 @@
+.review {
+    padding: 80px 0;
+
+    &__wrapper {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+
+    img {
+        max-width: 169px;
+        object-fit: contain;
+        align-self: start;
+    }
+
+
+    &__text {
+        width: 660px;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+        color: #0d0d0d;
+    }
+
+    &__subname {
+        font-weight: 500;
+        font-size: 14px;
+        color: #646464;
+    }
+
+
+    &__descr {
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 16px;
+        color: #0d0d0d;
+    }
+}

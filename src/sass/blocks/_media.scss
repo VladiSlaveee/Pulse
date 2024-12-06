@@ -9,6 +9,12 @@
             width: 30%;
         }
     }
+
+    .review {
+        .review__text {
+            width: 65%;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -50,13 +56,18 @@
     }
 
 
-    .catalog {
-        .catalog__content_active {
-            justify-content: center;
+    .review {
+        .review__wrapper {
+            gap: 40px 20px;
+        }
+
+        .review__text {
+            width: 60%;
         }
     }
-
 }
+
+
 
 @media screen and (max-width: 565px) {
     h2.title {
@@ -138,6 +149,23 @@
 
         .catalog__content {
             margin-top: 20px;
+        }
+    }
+
+    .review {
+        padding: 10px 0 !important;
+
+        img {
+            align-self: center !important;
+        }
+
+        .review__wrapper {
+            flex-direction: column;
+            align-items: center
+        }
+
+        .review__text {
+            width: 90%;
         }
     }
 
