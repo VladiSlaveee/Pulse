@@ -1,3 +1,20 @@
+const slider = tns({
+    container: '.carousel__iner',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    nav: false,
+    controls: false,
+    autoplayButtonOutput: false
+});
+
+document.querySelector('.prev').addEventListener('click', function () {
+    slider.goTo('prev');
+});
+document.querySelector('.next').addEventListener('click', function () {
+    slider.goTo('next');
+});
+
 
 
 $(document).ready(function () {
@@ -79,25 +96,30 @@ $(document).ready(function () {
     validateForms('#consultation-form');
     validateForms('#consultation form');
     validateForms('#order form');
+
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    $('form').submit(function (e) {
+        e.preventDefault();
+        $(this).find("input").val("");
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
+        $('form').trigger('reset');
+        return false;
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1400) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    new WOW().init();
 });
 
 
-const slider = tns({
-    container: '.carousel__iner',
-    items: 1,
-    slideBy: 'page',
-    autoplay: true,
-    nav: false,
-    controls: false,
-    autoplayButtonOutput: false
-});
-
-document.querySelector('.prev').addEventListener('click', function () {
-    slider.goTo('prev');
-});
-document.querySelector('.next').addEventListener('click', function () {
-    slider.goTo('next');
-});
 
 
 

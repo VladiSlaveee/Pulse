@@ -42,6 +42,7 @@ img {
 
 html {
     font-family: 'MuseoSansCyrl', sans-serif;
+    scroll-behavior: smooth;
 }
 
 @import 'blocks/promo';
@@ -58,3 +59,5 @@ html {
 @import 'blocks/review';
 @import 'blocks/footer';
 @import 'blocks/modal';
+@import 'blocks/pageup';
+@import 'base/animations';
